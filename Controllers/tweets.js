@@ -62,5 +62,8 @@ const putTweets=async(req,res)=>{
     }
 };
 module.exports={
-  
+  getTweets,
+  addTweets,
+  putTweets,
+  deleteTweets
 };
