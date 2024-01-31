@@ -16,19 +16,16 @@ console.log(error);
 res.send("Opps! Something went wrong")
 }
 };
-const addComments=async(res,req)=>{
-    try{
-    req.body.tweetId=req.params.tweetId
-    console.log(req.body);
-    let data=await Comments.create(req.body);
-    res.send({
-        data:data
-    })
-    }
-    catch(error){
-        console.log(error);
-        res.send("Opps! Something went wrong")
-    }
+const addComments = async (req, res) => {
+  try {
+    req.body.tweetId = req.params.tweetId;
+    console.log(req.body)
+    let data = await Comments.create(req.body);
+    res.send({ data: data });
+  } catch (error) {
+    console.log(error);
+    res.send("Opps! Something went wrong");
+  }
 };
 const putComments=async(req,res)=>{
     try{
